@@ -2,7 +2,7 @@
 
 A battle-hardened style guide for modular CSS.
 
-##Basic
+##The basics
 
 ### HTML
 
@@ -50,10 +50,35 @@ A battle-hardened style guide for modular CSS.
 
 ```
 
-##Basic
+## Layout
+
+## Groups
+Module within a module. Coming soon...
+
+## Helpers
+Coming soon...
+
+## Project structure
+Coming soon...
+
+## Sass
+Coming soon...
+
+## JavaScript
+Coming soon...
+
+## NoJS
+Coming soon...
+
+## Default Views / Modular Media Queries
+[Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
+
+## Code Library
+All common module patterns with full examples.
+
 
 Influences: [BEM](http://bem.info/), [SMACSS](http://smacss.com/), [Modular CSS](http://www.alanayoub.com/modular-css) and [OOCSS](http://oocss.org/)
 
 
-*Credits*
-[Matt Burrowes](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
+**Credits**
+[Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
