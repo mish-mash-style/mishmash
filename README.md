@@ -41,14 +41,38 @@ A battle-hardened style guide for modular CSS.
 /**
  * Nav Primary
  */
-.nav--primary{
+.nav--alpha{
     ...
 }
-    .nav--primary .nav__items{
+    .nav--alpha .nav__items{
         ...
     }
 
 ```
+
+## Naming conventions
+
+### Sizes
+
+.btn--xxs
+.btn--xs
+.btn--s
+.btn--m
+.btn--l
+.btn--xl
+.btn--xxl
+
+### Instances
+
+Useful when you have many colours. Follows the NATO Phonetic alphabet.
+
+$brand-alpha
+$brand-beta
+$brand-charlie
+$brand-delta
+$brand-echo
+...
+
 
 ## Layout
 
@@ -75,10 +99,6 @@ Coming soon...
 
 ## Code Library
 All common module patterns with full examples.
-
-
-Influences: [BEM](http://bem.info/), [SMACSS](http://smacss.com/), [Modular CSS](http://www.alanayoub.com/modular-css) and [OOCSS](http://oocss.org/)
-
 
 **Credits**
 [Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
