@@ -55,22 +55,35 @@ A battle-hardened style guide for modular CSS.
 ### Sizes
 
 .btn--xxs
+
 .btn--xs
+
 .btn--s
+
 .btn--m
+
 .btn--l
+
 .btn--xl
+
 .btn--xxl
+
+Can include as many xxxs as you like `.btn-xxxxl`.
 
 ### Instances
 
 Useful when you have many colours. Follows the NATO Phonetic alphabet.
 
 $brand-alpha
+
 $brand-beta
+
 $brand-charlie
+
 $brand-delta
+
 $brand-echo
+
 ...
 
 
