@@ -143,7 +143,6 @@ For layout use the border-box: box-sizing property on a global reset so you don'
         // Set a variable for the amount of columns you want to use.
         // In this case we are setting 12.
         $grid-column: 12;
-
         $column-inc: $grid-column;
         // Loop through and create grid columns based on the value of the $grid-column var.
         @while $column-inc > 0 {
