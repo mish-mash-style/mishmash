@@ -20,10 +20,12 @@ A battle-hardened style guide for modular CSS.
 
 ### CSS
 
+The core mishmash syntax is [BEM](http://bem.info)-based.
+
 ```css
 
 /**
- * Default Nav class
+ * Default .nav class
  */
 .nav{
     ...
@@ -39,7 +41,8 @@ A battle-hardened style guide for modular CSS.
             }
 
 /**
- * Nav Primary
+ * Example of .nav class with modifier (--alpha)
+ * Used: A short note where the class is used i.e. In top header navigation
  */
 .nav--alpha{
     ...
@@ -48,41 +51,64 @@ A battle-hardened style guide for modular CSS.
         ...
     }
 
+/**
+ * Example of .nav class with modifier (--beta)
+ * Used: In footer navigation
+ */
+.nav--beta{
+    ...
+}
+    .nav--beta .nav__item__link{
+        ...
+    }
+    
 ```
+
+### Signifying State
+
+Make use of State Modifiers to signify a module's state
+
+* `.is-active`
+* `.is-selected`
+* `.is-hidden`
+* `.is-great`
+
+#### Possessive and completed states
+
+* `.has-animated`
+* `.has-loaded`
+* `.has-dropdown`
+
+### File
+
 
 ## Naming conventions
 
 ### Sizes
 
-.btn--xxs
-
-.btn--xs
-
-.btn--s
-
-.btn--m
-
-.btn--l
-
-.btn--xl
-
-.btn--xxl
+* `.btn--xxs`
+* `.btn--xs`
+* `.btn--s`
+* `.btn--m`
+* `.btn--l`
+* `.btn--xl`
+* `.btn--xxl`
 
 Can include as many xxxs as you like `.btn-xxxxl`.
 
-### Instances
+### Instance modifiers
 
-Useful when you have many colours. Follows the NATO Phonetic alphabet.
+Use the NATO Phonetic alphabet when specifying multiple
 
-$brand-alpha
+In this example we are setting Sass variables:
 
-$brand-beta
-
-$brand-charlie
-
-$brand-delta
-
-$brand-echo
+```scss
+* $brand-alpha
+* $brand-beta
+* $brand-charlie
+* $brand-delta
+* $brand-echo
+```
 
 ...
 
@@ -96,7 +122,21 @@ Module within a module. Coming soon...
 Coming soon...
 
 ## Project structure
-Coming soon...
+
+* config
+* screen.scss
+    * partials
+        * _layout
+        * _fonts
+        * _grid
+        * _forms 
+        * _boxes
+        * _lists
+        * _icons
+        * _navigation
+        * _tables
+        * _buttons
+        * 
 
 ## Sass
 Coming soon...
@@ -105,7 +145,19 @@ Coming soon...
 Coming soon...
 
 ## NoJS
-Coming soon...
+
+.no-js .my-module{
+    ...
+}
+
+** Or with Sass **
+
+.my-module{
+    .no-js &{
+        ...
+    }
+}
+
 
 ## Default Views / Modular Media Queries
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
