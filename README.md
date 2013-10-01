@@ -23,7 +23,6 @@ A battle-hardened style guide for modular CSS.
 The core mishmash syntax is [BEM](http://bem.info)-based.
 
 ```css
-
 /**
  * Default .nav class
  */
@@ -61,7 +60,6 @@ The core mishmash syntax is [BEM](http://bem.info)-based.
     .nav--beta .nav__item__link{
         ...
     }
-    
 ```
 
 ### Signifying State
@@ -115,6 +113,59 @@ In this example we are setting Sass variables:
 
 ## Layout
 
+For layout use the border-box: box-sizing property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
+
+```scss
+@mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.grid {
+    &,
+    .grid__row {
+        @include clearfix;
+    }
+    .grid__row {
+        @include rem("margin", 0 -10px);
+    }
+    .grid__column {
+        float: left;
+        display: block;
+        @include rem("padding", 0 10px);
+        // Set a variable for the amount of columns you want to use.
+        // In this case we are setting 12.
+        $grid-column: 12;
+
+        $column-inc: $grid-column;
+        // Loop through and create grid columns based on the value of the $grid-column var.
+        @while $column-inc > 0 {
+            &.grid--column-#{$column-inc}{
+                width: ( 100% / $grid-column ) * $column-inc;
+            }
+            $grid-column: ($column-inc - 1);
+        }
+        // Loop through and create percentage based columns.
+        // The amount is defined by how many values are set in the $grid-array var.
+        $count-inc: 1;
+        $grid-array: 100%, 50%, 33.333333%, 25%, 20%, 16.666666%, 14.2857142857143%, 12.5%, 11.1111111111111%, 10%;
+        @while $count-inc <= length($grid-array) {
+            &.grid--count-#{$count-inc}{
+                width: nth($grid-array, $count-inc);
+            }
+            $count-inc: ($grid-inc + 1);
+        }
+    }
+}
+```
+
 ## Groups
 Module within a module. Coming soon...
 
@@ -129,14 +180,14 @@ Coming soon...
         * _layout
         * _fonts
         * _grid
-        * _forms 
+        * _forms
         * _boxes
         * _lists
         * _icons
         * _navigation
         * _tables
         * _buttons
-        * 
+        *
 
 ## Sass
 Coming soon...
