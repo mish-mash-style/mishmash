@@ -117,21 +117,19 @@ Can include as many xxxs as you like `.btn-xxxxl`.
 
 ### Instance modifiers
 
-Use the NATO Phonetic alphabet when specifying multiple
+Use the [NATO Phonetic alphabet](http://en.wikipedia.org/wiki/NATO_phonetic_alphabet) when specifying multiple variations.
 
 In this example we are setting Sass variables:
 
-```scss
-* $brand-alpha
-* $brand-beta
-* $brand-charlie
-* $brand-delta
-* $brand-echo
-```
+* `$brand-alpha`
+* `$brand-beta`
+* `$brand-charlie`
+* `$brand-delta`
+* `$brand-echo`
 
 ## Layout
 
-For layout use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
+If IE7 is no longer a concern, for layout, use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
 
 ```scss
 @mixin clearfix {
@@ -164,7 +162,7 @@ For layout use the `border-box: box-sizing` property on a global reset so you do
         $column-inc: $grid-column;
         // Loop through and create grid columns based on the value of the $grid-column var.
         @while $column-inc > 0 {
-            &.grid--column-#{$column-inc}{
+            &.grid__column-#{$column-inc}{
                 width: ( 100% / $grid-column ) * $column-inc;
             }
             $grid-column: ($column-inc - 1);
@@ -184,27 +182,11 @@ For layout use the `border-box: box-sizing` property on a global reset so you do
 ```
 
 ## Groups
-In short, a Group is a collection of modules. Modules within a module. When building a site in a modular fashion it's very easy to build a number of disparate modules, add these to your site/app and everything works. But sometimes you'll run into the need display modules differently depending on their context. This is where Groups come in.
+In short, a Group is a collection of modules. Or modules within a module. When building a site in a modular fashion, it's very easy to build a number of disparate modules, add these to your site/app and everything works. But sometimes you'll run into the need to display modules differently depending on their context. This is where Groups come in.
 
-Groups create a context for modules to sit within, forming a relationship between modules.
-
+Groups create a context for modules to sit within, forming a relationship between them. Each sub-module is then made part of the containing module (block, in BEM) by including a class.
 
 **Method 1**
-
-```html
-<button class="g-btn btn btn--alpha">Save Work <i class="g-btn__icon icon"></i></button>
-```
-
-```scss
-.g-btn{
-    .g-btn__icon{
-        float: right;
-    }
-}
-
-```
-
-**Method 2**
 
 ```html
 <button class="btn btn--alpha">Save Work <i class="g-btn__icon icon"></i></button>
@@ -216,66 +198,93 @@ Groups create a context for modules to sit within, forming a relationship betwee
         float: right;
     }
 }
+```
 
+**Method 2**
+
+```html
+<button class="g-btn btn btn--alpha">Save Work <i class="g-btn__icon icon"></i></button>
+```
+
+```scss
+.g-btn{
+    .g-btn__icon{
+        float: right;
+    }
+}
 ```
 
 Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
 
-## Helpers
-Coming soon...
-
 ## Project structure
 
 * default.scss
+	* themes
+		* _theme-alpha
     * config
         * _variables
-            * themes
     * helpers
         * _helpers
         * _mixins
         * _reset
-    * groups
-        * Groups are unrelated modules brought together
-    * partials
-        * _layout
+    * ui
+        * groups
+            * Groups are a collection of modules
         * _fonts
+        * _layout
         * _grid
         * _forms
-        * _boxes
         * _lists
-        * _icons
         * _navigation
         * _tables
+        * _boxes
         * _buttons
+        * _icons
 
 ## Helper classes
 
-`.align-right`
-`.align-left`
-`.align-center`
-`.align-right`
+* `.align-right`
+* `.align-left`
+* `.align-center`
+* `.align-right`
 
-## Sass
-Coming soon...
-
-## JavaScript
+## JavaScript hooks
 There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
-### JavaScript / CSS hooks
-Only to be used for JavaScript and not for styling.
+However, for using JavaScript in your code, we do suggest the use of prefixed CSS class hooks `.js-xxxxx`. These provide an easy method to bind JavaScript functionality without relying on IDs or non-concrete class names.
+
+Note: These should be used purely as JS hooks and not styled in anyway, other than in a [NoJS](#example) instance.
+
+### Example
+```html
+<div class="box">
+	<button class="box__action js-toggle" data-id="bacon">Toggle content</button>
+	<div class="box__content" id="bacon">
+    	Bacon ipsum dolor sit amet corned beef tri-tip venison sirloin chuck shank brisket meatball bresaola swine jowl doner cow. Spare ribs drumstick pork loin tenderloin.
+	</div>
+</div>
+```
+
+```css
+.js-toggle{
+    .no-js &{
+        ...
+    }
+}
+```
 
 ## NoJS
 
 ```css
-.no-js .my-module{
+.no-js .module{
     ...
 }
 ```
 
-** Or with Sass **
+**Or with Sass**
 
 ```scss
-.my-module{
+.module{
     .no-js &{
         ...
     }
@@ -286,17 +295,38 @@ Only to be used for JavaScript and not for styling.
 
 [Modernizr](http://modernizr.com/) is fast becoming one of the most useful tools in the modern Front-end developers arsenal. Much like the [No-JS](#nojs) detection method listed above we can easily customise builds based on the environment they are served in.
 
+**Vanilla CSS**
 ```css
-.no-touch .my-module {
+.no-touch .module {
     ...
 }
 ```
 
-** Or with Sass **
+**Or with Sass**
 
 ```scss
-.my-module{
+.module{
     .no-touch &{
+        ...
+    }
+}
+```
+
+## Old IE
+
+**Vanilla CSS**
+
+```css
+.lt-ie8 .module {
+    ...
+}
+```
+
+**Or with Sass**
+
+```scss
+.module{
+    .lt-ie8 &{
         ...
     }
 }
