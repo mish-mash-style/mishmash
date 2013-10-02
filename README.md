@@ -128,9 +128,23 @@ In this example we are setting Sass variables:
 * `$brand-delta`
 * `$brand-echo`
 
+Or for modified elements:
+
+```html
+.box{
+    ...
+}
+.box--alpha{
+    background: blue;
+}
+.box--beta{
+    background: red;
+}
+```
+
 ## Layout
 
-If IE7 is no longer a concern, use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
+For layout - and if IE7 is no longer a concern - use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
 
 ```scss
 @mixin clearfix {
