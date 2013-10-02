@@ -274,6 +274,21 @@ Only to be used for JavaScript and not for styling.
     }
 }
 
+## Feature detection
+
+[Modernizr](http://modernizr.com/) is fast becoming one of the most useful tools in the modern Front-end developers arsenal. Much like the [No-JS](#nojs) detection method listed above we can easily customise builds based on the environment they are served in.
+
+.no-touch .my-module {
+    ...
+}
+
+** Or with Sass **
+
+.my-module{
+    .no-touch &{
+        ...
+    }
+}
 
 ## Default Views / Modular Media Queries
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
