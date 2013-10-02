@@ -91,17 +91,15 @@ Make use of State Modifiers to signify a module's state
 * `.is-active`
 * `.is-selected`
 * `.is-hidden`
-* `.is-great`
 * `.is-loading`
+* `.is-scrollable`
+* `.is-editable`
 
 #### Possessive and completed states
 
 * `.has-animated`
 * `.has-loaded`
 * `.has-dropdown`
-
-### File
-
 
 ## Naming conventions
 
@@ -130,9 +128,6 @@ In this example we are setting Sass variables:
 * $brand-delta
 * $brand-echo
 ```
-
-...
-
 
 ## Layout
 
@@ -217,7 +212,7 @@ Groups create a context for modules to sit within, forming a relationship betwee
 
 ```scss
 .btn--alpha{
-    .btn__icon{
+    .g-btn__icon{
         float: right;
     }
 }
@@ -225,9 +220,6 @@ Groups create a context for modules to sit within, forming a relationship betwee
 ```
 
 Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
-
-An example of a group:
-
 
 ## Helpers
 Coming soon...
@@ -274,33 +266,41 @@ Only to be used for JavaScript and not for styling.
 
 ## NoJS
 
+```css
 .no-js .my-module{
     ...
 }
+```
 
 ** Or with Sass **
 
+```scss
 .my-module{
     .no-js &{
         ...
     }
 }
+```
 
 ## Feature detection
 
 [Modernizr](http://modernizr.com/) is fast becoming one of the most useful tools in the modern Front-end developers arsenal. Much like the [No-JS](#nojs) detection method listed above we can easily customise builds based on the environment they are served in.
 
+```css
 .no-touch .my-module {
     ...
 }
+```
 
 ** Or with Sass **
 
+```scss
 .my-module{
     .no-touch &{
         ...
     }
 }
+```
 
 ## Default Views / Modular Media Queries
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
