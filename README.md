@@ -166,16 +166,45 @@ For layout use the `border-box: box-sizing` property on a global reset so you do
 ```
 
 ## Groups
-In short, a Group is a collection of modules. Modules within a module. When building a site in a modular fashion it's very easy to build a number of disparate modules and piece these together. But sometimes you'll need a module to display different depending on the context. This is where Groups come in.
+In short, a Group is a collection of modules. Modules within a module. When building a site in a modular fashion it's very easy to build a number of disparate modules, add these to your site/app and everything works. But sometimes you'll run into the need display modules differently depending on their context. This is where Groups come in.
+
+Groups create a context for modules to sit within, forming a relationship between modules.
+
+
+**Method 1**
+
+```html
+<button class="g-btn btn btn--alpha">Save Work <i class="g-btn__icon icon"></i></button>
+```
+
+```scss
+.g-btn{
+    .g-btn__icon{
+        float: right;
+    }
+}
+
+```
+
+**Method 2**
+
+```html
+<button class="btn btn--alpha">Save Work <i class="g-btn__icon icon"></i></button>
+```
+
+```scss
+.btn--alpha{
+    .btn__icon{
+        float: right;
+    }
+}
+
+```
 
 Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
 
 An example of a group:
 
-```scss
-...
-
-```
 
 ## Helpers
 Coming soon...
@@ -185,6 +214,7 @@ Coming soon...
 * default.scss
     * config
         * _variables
+            * themes
     * helpers
         * _helpers
         * _mixins
@@ -202,6 +232,13 @@ Coming soon...
         * _navigation
         * _tables
         * _buttons
+
+## Helper classes
+
+`.align-right`
+`.align-left`
+`.align-center`
+`.align-right`
 
 ## Sass
 Coming soon...
