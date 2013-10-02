@@ -205,7 +205,7 @@ Groups create a context for modules to sit within, forming a relationship betwee
 
 ```scss
 .btn--alpha{
-    .btn__icon{
+    .g-btn__icon{
         float: right;
     }
 }
@@ -262,33 +262,41 @@ Only to be used for JavaScript and not for styling.
 
 ## NoJS
 
+```css
 .no-js .my-module{
     ...
 }
+```
 
 ** Or with Sass **
 
+```scss
 .my-module{
     .no-js &{
         ...
     }
 }
+```
 
 ## Feature detection
 
 [Modernizr](http://modernizr.com/) is fast becoming one of the most useful tools in the modern Front-end developers arsenal. Much like the [No-JS](#nojs) detection method listed above we can easily customise builds based on the environment they are served in.
 
+```css
 .no-touch .my-module {
     ...
 }
+```
 
 ** Or with Sass **
 
+```scss
 .my-module{
     .no-touch &{
         ...
     }
 }
+```
 
 ## Default Views / Modular Media Queries
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
