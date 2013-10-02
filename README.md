@@ -2,6 +2,16 @@
 
 A battle-hardened style guide for modular CSS.
 
+* [HTML](#html)
+* [CSS](#css)
+    * [Signifying state](#signifying-state)
+        * [Possessive and completed states](#possessive-and-completed-states)
+    * [File](#file)
+    * [Watching files](#watching-files)
+* [Naming conventions](#naming-conventions)
+    * [Sizes](#sizes)
+    * [Instance modifiers](#instance-modifiers)
+
 ##The basics
 
 ### HTML
@@ -246,6 +256,9 @@ Coming soon...
 
 ## JavaScript
 There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
+
+### JavaScript / CSS hooks
+Onlt to be used for JavaScript and not for styling.
 
 ## NoJS
 
