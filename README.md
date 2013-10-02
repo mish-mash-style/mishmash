@@ -258,7 +258,7 @@ Coming soon...
 There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ### JavaScript / CSS hooks
-Onlt to be used for JavaScript and not for styling.
+Only to be used for JavaScript and not for styling.
 
 ## NoJS
 
