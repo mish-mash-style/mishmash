@@ -113,7 +113,7 @@ In this example we are setting Sass variables:
 
 ## Layout
 
-For layout use the border-box: box-sizing property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
+For layout use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
 
 ```scss
 @mixin clearfix {
@@ -166,15 +166,31 @@ For layout use the border-box: box-sizing property on a global reset so you don'
 ```
 
 ## Groups
-Module within a module. Coming soon...
+In short, a Group is a collection of modules. Modules within a module. When building a site in a modular fashion it's very easy to build a number of disparate modules and piece these together. But sometimes you'll need a module to display different depending on the context. This is where Groups come in.
+
+Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
+
+An example of a group:
+
+```scss
+...
+
+```
 
 ## Helpers
 Coming soon...
 
 ## Project structure
 
-* config
-* screen.scss
+* default.scss
+    * config
+        * _variables
+    * helpers
+        * _helpers
+        * _mixins
+        * _reset
+    * groups
+        * Groups are unrelated modules brought together
     * partials
         * _layout
         * _fonts
@@ -186,7 +202,6 @@ Coming soon...
         * _navigation
         * _tables
         * _buttons
-        *
 
 ## Sass
 Coming soon...
