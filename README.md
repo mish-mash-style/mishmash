@@ -79,17 +79,15 @@ Make use of State Modifiers to signify a module's state
 * `.is-active`
 * `.is-selected`
 * `.is-hidden`
-* `.is-great`
 * `.is-loading`
+* `.is-scrollable`
+* `.is-editable`
 
 #### Possessive and completed states
 
 * `.has-animated`
 * `.has-loaded`
 * `.has-dropdown`
-
-### File
-
 
 ## Naming conventions
 
@@ -118,9 +116,6 @@ In this example we are setting Sass variables:
 * $brand-delta
 * $brand-echo
 ```
-
-...
-
 
 ## Layout
 
@@ -213,9 +208,6 @@ Groups create a context for modules to sit within, forming a relationship betwee
 ```
 
 Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
-
-An example of a group:
-
 
 ## Helpers
 Coming soon...
