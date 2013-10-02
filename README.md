@@ -70,6 +70,7 @@ Make use of State Modifiers to signify a module's state
 * `.is-selected`
 * `.is-hidden`
 * `.is-great`
+* `.is-loading`
 
 #### Possessive and completed states
 
@@ -244,7 +245,7 @@ Coming soon...
 Coming soon...
 
 ## JavaScript
-Coming soon...
+There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
 ## NoJS
 
