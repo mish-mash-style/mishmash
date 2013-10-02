@@ -79,18 +79,19 @@ The core mishmash syntax is [BEM](http://bem.info)-based.
 .nav--beta{
     ...
 }
-    .nav--beta .nav__item__link{
+    .nav--beta .nav__items{
         ...
     }
 ```
 
 ### Signifying State
 
-Make use of State Modifiers to signify a module's state
+Make use of State Indicators to signify a module's state
 
 * `.is-active`
 * `.is-selected`
 * `.is-hidden`
+* `.is-visible`
 * `.is-loading`
 * `.is-scrollable`
 * `.is-editable`
@@ -129,7 +130,7 @@ In this example we are setting Sass variables:
 
 ## Layout
 
-If IE7 is no longer a concern, for layout, use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
+If IE7 is no longer a concern, use the `border-box: box-sizing` property on a global reset so you don't have to worry about padding / border style declarations when using % based widths.
 
 ```scss
 @mixin clearfix {
@@ -184,7 +185,7 @@ If IE7 is no longer a concern, for layout, use the `border-box: box-sizing` prop
 ## Groups
 In short, a Group is a collection of modules. Or modules within a module. When building a site in a modular fashion, it's very easy to build a number of disparate modules, add these to your site/app and everything works. But sometimes you'll run into the need to display modules differently depending on their context. This is where Groups come in.
 
-Groups create a context for modules to sit within, forming a relationship between them. Each sub-module is then made part of the containing module (block, in BEM) by including a class.
+Groups create a context for modules to sit within, forming a relationship between them. Each sub-module is then made part of the containing module (a block in BEM) by including a class.
 
 **Method 1**
 
@@ -214,7 +215,7 @@ Groups create a context for modules to sit within, forming a relationship betwee
 }
 ```
 
-Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doens't work, then proceed to creating a group.
+Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doesn't work, then proceed to creating a group.
 
 ## Project structure
 
@@ -251,7 +252,7 @@ Before creating a group you may find it easier to create what you want by applyi
 ## JavaScript hooks
 There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
-However, for using JavaScript in your code, we do suggest the use of prefixed CSS class hooks `.js-xxxxx`. These provide an easy method to bind JavaScript functionality without relying on IDs or non-concrete class names.
+However, for using JavaScript in your code, we do suggest the use of prefixed CSS class hooks `.js-`. These provide an easy method to bind JavaScript functionality without relying on IDs or non-concrete class names.
 
 Note: These should be used purely as JS hooks and not styled in anyway, other than in a [NoJS](#example) instance.
 
