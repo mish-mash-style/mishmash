@@ -351,17 +351,23 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
 
 ## Code Library
-All common module patterns with full examples.
+All common module patterns.
 
 ### Breadcrumb
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
+    <li class="breadcrumb__item first"><a href="" class="breadcrumb__item__link">Item 1</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
+    <li class="breadcrumb__item last is-active"><a href="" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
+```
+
+### Login screen (Group)
+
+```html
+...
 ```
 
 emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
