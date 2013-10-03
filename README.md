@@ -6,17 +6,14 @@ A battle-hardened style guide for modular CSS.
 * [CSS](#css)
     * [Signifying state](#signifying-state)
         * [Possessive and completed states](#possessive-and-completed-states)
-    * [File](#file)
-    * [Watching files](#watching-files)
 * [Naming conventions](#naming-conventions)
     * [Sizes](#sizes)
     * [Instance modifiers](#instance-modifiers)
 * [Layout](#layout)
 * [Groups](#groups)
 * [Helpers](#helpers)
-* [Project structure](#project-structure)
+* [Sass structure](#sass-structure)
 * [Helper classes](#helper-classes)
-* [Sass](#sass)
 * [JavaScript](#javascript)
     * [JavaScript hooks](#javascript-hooks)
 * [NoJS](#nojs)
@@ -231,7 +228,7 @@ Groups create a context for modules to sit within, forming a relationship betwee
 
 Before creating a group you may find it easier to create what you want by applying a modifier class directly to a module. This has the benefits of reuse anywhere else. If this doesn't work, then proceed to creating a group.
 
-## Project structure
+## Sass structure
 
 * default.scss
 	* themes
@@ -244,7 +241,7 @@ Before creating a group you may find it easier to create what you want by applyi
         * _reset
     * ui
         * groups
-            * Groups are a collection of modules
+            * A group is a collection of modules
         * _fonts
         * _layout
         * _grid
@@ -263,14 +260,17 @@ Before creating a group you may find it easier to create what you want by applyi
 * `.align-center`
 * `.align-right`
 
-## JavaScript hooks
+## JavaScript
+
 There are many many JS style guides out there so why reinvent the wheel? If you are looking to standardise the way your team writes JS take a look at the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript).
 
-However, for using JavaScript in your code, we do suggest the use of prefixed CSS class hooks `.js-`. These provide an easy method to bind JavaScript functionality without relying on IDs or non-concrete class names.
+### JavaScript hooks
+
+For using JavaScript in your code, we suggest the use of prefixed CSS class hooks `.js-`. These provide an easy method to bind JavaScript functionality without relying on IDs or non-concrete class names.
 
 Note: These should be used purely as JS hooks and not styled in anyway, other than in a [NoJS](#example) instance.
 
-### Example
+**Example**
 ```html
 <div class="box">
 	<button class="box__action js-toggle" data-id="bacon">Toggle content</button>
@@ -281,32 +281,18 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ```
 
 ```css
-.js-toggle{
-    .no-js &{
-        ...
-    }
-}
-```
-
-## NoJS
-
-```css
-.no-js .module{
+.js-toggle {
     ...
 }
 ```
 
-**Or with Sass**
-
 ```scss
-.module{
-    .no-js &{
-        ...
-    }
+.js-toggle {
+    ...
 }
 ```
 
-## Feature detection
+### Feature detection
 
 [Modernizr](http://modernizr.com/) is fast becoming one of the most useful tools in the modern Front-end developers arsenal. Much like the [No-JS](#nojs) detection method listed above we can easily customise builds based on the environment they are served in.
 
@@ -318,7 +304,6 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ```
 
 **Or with Sass**
-
 ```scss
 .module{
     .no-touch &{
@@ -327,7 +312,25 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 }
 ```
 
-## Old IE
+###No JS
+
+**Vanilla CSS**
+```css
+.no-js .module {
+    ...
+}
+```
+
+**Or with Sass**
+```scss
+.module {
+    .no-js & {
+        ...
+    }
+}
+```
+
+### Old IE
 
 **Vanilla CSS**
 
@@ -338,7 +341,6 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ```
 
 **Or with Sass**
-
 ```scss
 .module{
     .lt-ie8 &{
