@@ -18,7 +18,7 @@ A battle-hardened style guide for modular CSS.
 * [Helper classes](#helper-classes)
 * [Sass](#sass)
 * [JavaScript](#javascript)
-    * [JavaScript / CSS hooks](#javascript--css-hooks)
+    * [JavaScript hooks](#javascript-hooks)
 * [NoJS](#nojs)
 * [Feature detection](#feature-detection)
 * [Default Views / Modular Media Queries](#default-views--modular-media-queries)
