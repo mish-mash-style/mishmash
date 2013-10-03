@@ -128,14 +128,14 @@ In this example we are setting Sass variables:
 Or for modified elements:
 
 ```html
-.box{
+.box {
     ...
 }
-.box--alpha{
-    background: blue;
+.box--alpha {
+    background: $brand-alpha;
 }
-.box--beta{
-    background: red;
+.box--beta {
+    background: $brand-beta;
 }
 ```
 
@@ -281,8 +281,9 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ```
 
 ```js
-$(document).on('click', '.js-toggle', function() {
+$(document).on('click', '.js-toggle', function(e) {
     ...
+    e.preventDefault();
 });
 ```
 
