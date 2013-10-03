@@ -17,7 +17,7 @@ A battle-hardened style guide for modular CSS.
 * [JavaScript](#javascript)
     * [JavaScript hooks](#javascript-hooks)
     * [Feature detection](#feature-detection)
-    * [NoJS](#nojs)
+    * [NoJS](#no-js)
 * [Default Views / Modular Media Queries](#default-views--modular-media-queries)
 * [Code Library](#code-library)
 
