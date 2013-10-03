@@ -355,16 +355,16 @@ All common module patterns with full examples.
 
 ### Breadcrumb
 
-```emmet
-ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}
-```
-
+```html
 <ol class="breadcrumb">
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
+```
+
+emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 
 **Credits**
 [Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
