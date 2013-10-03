@@ -16,8 +16,8 @@ A battle-hardened style guide for modular CSS.
 * [Helper classes](#helper-classes)
 * [JavaScript](#javascript)
     * [JavaScript hooks](#javascript-hooks)
-* [NoJS](#nojs)
-* [Feature detection](#feature-detection)
+    * [Feature detection](#feature-detection)
+    * [NoJS](#nojs)
 * [Default Views / Modular Media Queries](#default-views--modular-media-queries)
 * [Code Library](#code-library)
 
@@ -280,16 +280,10 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 </div>
 ```
 
-```css
-.js-toggle {
+```js
+$(document).on('click', '.js-toggle', function() {
     ...
-}
-```
-
-```scss
-.js-toggle {
-    ...
-}
+});
 ```
 
 ### Feature detection
@@ -312,7 +306,7 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 }
 ```
 
-###No JS
+#### No JS
 
 **Vanilla CSS**
 ```css
@@ -330,7 +324,7 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 }
 ```
 
-### Old IE
+#### Old IE
 
 **Vanilla CSS**
 
