@@ -353,5 +353,18 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ## Code Library
 All common module patterns with full examples.
 
+### Breadcrumb
+
+```emmet
+ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}
+```
+
+<ol class="breadcrumb">
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
+</ol>
+
 **Credits**
 [Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
