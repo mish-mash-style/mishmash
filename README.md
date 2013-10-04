@@ -141,7 +141,7 @@ Or for modified elements:
 ```
 
 **Or with Sass**
-```css
+```sass
 .box {
     &.box--alpha {
         background: $brand-alpha;
@@ -360,23 +360,17 @@ $(document).on('click', '.js-toggle', function(e) {
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
 
 ## Code Library
-All common module patterns.
+All common module patterns with full examples.
 
 ### Breadcrumb
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb__item first"><a href="" class="breadcrumb__item__link">Item 1</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
-    <li class="breadcrumb__item last is-active"><a href="" class="breadcrumb__item__link">Item 4</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
-```
-
-### Login screen (Group)
-
-```html
-...
 ```
 
 emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
