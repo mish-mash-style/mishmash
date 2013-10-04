@@ -127,7 +127,8 @@ In this example we are setting Sass variables:
 
 Or for modified elements:
 
-```html
+**Vanilla CSS**
+```css
 .box {
     ...
 }
@@ -138,6 +139,17 @@ Or for modified elements:
     background: $brand-beta;
 }
 ```
+
+**Or with Sass**
+```css
+.box {
+    &.box--alpha {
+        background: $brand-alpha;
+    }
+    &.box--beta {
+        background: $brand-beta;
+    }
+}
 
 ## Layout
 
