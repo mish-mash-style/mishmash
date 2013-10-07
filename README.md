@@ -89,6 +89,8 @@ Make use of State Indicators to signify a module's state
 * `.is-selected`
 * `.is-hidden`
 * `.is-visible`
+* `.is-valid`
+* `.is-invalid`
 * `.is-loading`
 * `.is-scrollable`
 * `.is-editable`
@@ -97,6 +99,7 @@ Make use of State Indicators to signify a module's state
 
 * `.has-animated`
 * `.has-loaded`
+* `.has-error`
 * `.has-dropdown`
 
 ## Naming conventions
@@ -359,14 +362,34 @@ All common module patterns.
     <li class="breadcrumb__item last is-active"><a href="" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
 ```
+emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 
 ### Login screen (Group)
 
 ```html
-...
+<form class="form form-standard form--vertical" action="#">
+    <fieldset class="form__section">
+        <p class="form__message">
+            Enter your email address below and we’ll send you a link to reset your password.
+        </p>
+        <ol class="form__items">
+            <li class="form__item"><label>Username</label><input class="form__input" type="text">
+                <div class="form__item__message">
+                    <p>Please enter your username</p>
+                </div>
+            </li>
+            <li class="form__item"><label>Password</label><input class="form__input" type="password"></li>
+        </ol>
+    </fieldset>
+    <fieldset class="form__section form__section--actions">
+        <ol class="form__items" start="3">
+            <li class="form__item"><button type="submit">Sign in</button></li>
+            <li class="form__item"><a href="#">Reset your password</a></li>
+        </ol>
+    </fieldset>
+</form>
 ```
 
-emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 
 **Credits**
 [Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
