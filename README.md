@@ -365,22 +365,22 @@ $(document).on('click', '.js-toggle', function(e) {
 ## Code Library
 All common module patterns with full examples.
 
-### Breadcrumb
+## Breadcrumb
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
-    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
+    <li class="breadcrumb__item is-first"><a href="#" class="breadcrumb__item__link">Item 1</a></li>
+    <li class="breadcrumb__item"><a href="#" class="breadcrumb__item__link">Item 2</a></li>
+    <li class="breadcrumb__item"><a href="#" class="breadcrumb__item__link">Item 3</a></li>
+    <li class="breadcrumb__item is-active is-last"><a href="#" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
 ```
 emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 
-### Login screen (Group)
+## Login screen (Group)
 
 ```html
-<form class="form form-standard form--vertical" action="#">
+<form class="form form--vertical" action="#">
     <fieldset class="form__section">
         <p class="form__message">
             Enter your email address below and we’ll send you a link to reset your password.
@@ -401,6 +401,38 @@ emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
         </ol>
     </fieldset>
 </form>
+```
+
+## Buttons
+
+### A basic button
+
+```html
+<button class="btn">Save</button>
+```
+
+### Button with modifier class
+
+```html
+<button class="btn btn--alpha">Save</button>
+```
+
+### Button with modifier class and an icon
+
+```html
+<button class="btn btn--alpha"><span class="icon icon--save"></span> Save</button>
+```
+
+### Button with icon as child element
+
+```html
+<button class="btn btn--alpha"><span class="btn__icon icon icon--save"></span> Save</button>
+```
+
+### Defined Button / Icon group
+
+```html
+...
 ```
 
 **Credits**
