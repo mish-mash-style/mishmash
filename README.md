@@ -130,17 +130,29 @@ In this example we are setting Sass variables:
 
 Or for modified elements:
 
-```html
-.box{
+**Vanilla CSS**
+```css
+.box {
     ...
 }
-.box--alpha{
-    background: blue;
+.box--alpha {
+    background: $brand-alpha;
 }
-.box--beta{
-    background: red;
+.box--beta {
+    background: $brand-beta;
 }
 ```
+
+**Or with Sass**
+```sass
+.box {
+    &.box--alpha {
+        background: $brand-alpha;
+    }
+    &.box--beta {
+        background: $brand-beta;
+    }
+}
 
 ## Layout
 
@@ -284,8 +296,9 @@ Note: These should be used purely as JS hooks and not styled in anyway, other th
 ```
 
 ```js
-$(document).on('click', '.js-toggle', function() {
+$(document).on('click', '.js-toggle', function(e) {
     ...
+    e.preventDefault();
 });
 ```
 
@@ -350,16 +363,16 @@ $(document).on('click', '.js-toggle', function() {
 [Sass Media Queries](https://github.com/ourmaninamsterdam/sass-mediaqueries)
 
 ## Code Library
-All common module patterns.
+All common module patterns with full examples.
 
 ### Breadcrumb
 
 ```html
 <ol class="breadcrumb">
-    <li class="breadcrumb__item first"><a href="" class="breadcrumb__item__link">Item 1</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 1</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 2</a></li>
     <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 3</a></li>
-    <li class="breadcrumb__item last is-active"><a href="" class="breadcrumb__item__link">Item 4</a></li>
+    <li class="breadcrumb__item"><a href="" class="breadcrumb__item__link">Item 4</a></li>
 </ol>
 ```
 emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
@@ -389,7 +402,6 @@ emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
     </fieldset>
 </form>
 ```
-
 
 **Credits**
 [Matt Burrows](https://github.com/mattjburrows) and [Justin Perry](https://github.com/ourmaninamsterdam)
