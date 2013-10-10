@@ -403,6 +403,24 @@ emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 </form>
 ```
 
+## Footer
+
+```html
+<footer class="footer" role="contentinfo">
+    <p class="footer__terms">
+        <small>&copy; 2013 GitHub, Inc.</small>
+    </p>
+    <nav class="footer__terms">
+        <ul class="footer__links">
+            <li class="footer__links__item"><a class="footer__links__item-label" href="#">Terms</a></li>
+            <li class="footer__links__item"><a class="footer__links__item-label" href="#">Privacy</a></li>
+            <li class="footer__links__item"><a class="footer__links__item-label" href="#">Security</a></li>
+            <li class="footer__links__item"><a class="footer__links__item-label" href="#">Contact</a></li>
+        </ul>
+    </nav>
+</footer>
+```
+
 ## Buttons
 
 ### A basic button
@@ -423,10 +441,10 @@ emmet: `ol.breadcrumb>li.breadcrumb__item*4>a.breadcrumb__item__link{Item $}`
 <button class="btn btn--alpha"><span class="icon icon--save"></span> Save</button>
 ```
 
-### Button with icon as child element
+### Button with icon as child (or group) element
 
 ```html
-<button class="btn btn--alpha"><span class="btn__icon icon icon--save"></span> Save</button>
+<button class="btn"><span class="btn__icon icon icon--save"></span> Save</button>
 ```
 
 ### Defined Button / Icon group
