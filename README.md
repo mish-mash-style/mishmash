@@ -1,6 +1,6 @@
 #mishmash
 
-MishMash is a battle-hardened style guide for modular CSS. It is designed to help alleviate the common woes that Front-end developers encounter on a daily basis.
+MishMash is a battle-hardened style guide for modular CSS. It is designed to help alleviate the common woes that Front-end developers encounter on a daily basis by providing a set of rules, naming conventions and common design patterns.
 
 MishMash is not replacement for common frameworks such as [Twitter Bootstrap](http://getbootstrap.com/) or [Zurb's foundation](http://foundation.zurb.com/), instead it is the methodologies needed to create your own boilerplate for rapid and consistent development.
 
